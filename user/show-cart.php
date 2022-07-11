@@ -1,5 +1,6 @@
 <?php
 session_start();
+if(isset($_SESSION['user'])){
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -159,3 +160,6 @@ session_start();
 </body>
 
 </html>
+<?php }else{
+    header("Location:http://localhost/Technology/user/login.php");
+} ?>

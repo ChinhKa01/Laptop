@@ -12,7 +12,7 @@ if($r['id_role'] == 2){
     header("Location:http://localhost/Technology/user/index.php");
 }
 else if($r['id_role'] == 1) {
-    $_SESSION['user'] = $r;
+    $_SESSION['admin'] = $r;
     header("Location:http://localhost/Technology/admin/index.php");
 }
 }else{
