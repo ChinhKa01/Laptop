@@ -13,4 +13,3 @@ if($rs){
     $_SESSION['success'] = "OK";
     header("Location:http://localhost/Technology/user/profile.php");
 }
-?>

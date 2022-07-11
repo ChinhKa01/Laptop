@@ -4,7 +4,8 @@
 <head>
     <?php
     session_start();
-    include("../head.php"); 
+    if (isset($_SESSION["admin"])) {
+        include("../head.php");
     ?>
 </head>
 
@@ -146,3 +147,6 @@
 </body>
 
 </html>
+<?php } else {
+        header("Location:http://localhost/Technology/user/login.php");
+    } ?>

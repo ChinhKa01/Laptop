@@ -30,7 +30,7 @@
                 </a>
 
                 <!-- item-->
-                <a href="../user/login.php" class="dropdown-item notify-item">
+                <a href="http://localhost/Technology/user/logout.php" class="dropdown-item notify-item">
                     <i class="mdi mdi-logout mr-1"></i>
                     <span>Đăng xuất</span>
                 </a>

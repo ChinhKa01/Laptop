@@ -16,7 +16,7 @@ include("../connect.php");
         <div class="header-area">
             <?php include("header.php"); ?>
             <div class="slider-area">
-                    <div class="slider-active owl-carousel">
+                <div class="slider-active owl-carousel">
                     <div class="single-slider single-slider-hm1 bg-img height-100vh" style="background-image: url(assets/img/slider/Slider2.jpg);background-size:60% 60%;background-repeat : no-repeat;background-position:10px;">
                         <div class="slider-content slider-animation slider-content-style-1 slider-animated-1">
                             <h1 style="color:yellow" class="animated">Fashion</h1>
@@ -350,9 +350,9 @@ include("../connect.php");
                                     id
                                 },
                             }).done(function(data) {
-                                if(data == "ErrorOrder") {
+                                if (data == "ErrorOrder") {
                                     $.notify('Đã hết sản phẩm , vui lòng chờ cập nhật thêm!', 'error');
-                                }else{
+                                } else {
                                     $(".product-count").text(data);
                                     $.notify('Thêm vào giỏ hàng thành công!', 'success');
                                 }

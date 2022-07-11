@@ -7,7 +7,7 @@ $rs = mysqli_query($connect, $sql);
 
 $sql = "DELETE FROM orders WHERE id = '$id_order'";
 $rs = mysqli_query($connect, $sql);
-if($rs){
+if ($rs) {
     $_SESSION['success'] = "delete success";
     header("Location:http://localhost/Technology/user/order_history.php");
 }

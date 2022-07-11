@@ -60,7 +60,7 @@ include("../connect.php");
                         }
                         ?>
                     </div>
-                    <?php } else {
+                <?php } else {
                     echo "
                     <div style='height: 200px;'>
                         <h2>Không tìm thấy sản phẩm nào!</h2>

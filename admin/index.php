@@ -391,9 +391,9 @@
                         <i class="mdi mdi-menu"></i>
                     </button>
                     <div class="app-search dropdown d-none d-lg-block">
-                        <form action="product/timkiem.php" method = "POST">
+                        <form action="product/timkiem.php" method="POST">
                             <div class="input-group">
-                                <input type="text" class="form-control dropdown-toggle" name = "txtSearch" placeholder="Tìm kiếm..." id="top-search">
+                                <input type="text" class="form-control dropdown-toggle" name="txtSearch" placeholder="Tìm kiếm..." id="top-search">
                                 <span class="mdi mdi-magnify search-icon"></span>
                                 <div class="input-group-append">
                                     <button class="btn btn-primary" type="submit">Tìm kiếm</button>

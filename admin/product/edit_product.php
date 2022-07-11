@@ -4,7 +4,8 @@
 <head>
     <?php
     session_start();
-    include("../head.php"); ?>
+    if ($_SESSION['admin']) {
+        include("../head.php"); ?>
 </head>
 
 <body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
@@ -21,7 +22,7 @@
         <div class="content-page">
             <div class="content">
                 <!-- Topbar Start -->
-                <?php include("../header.php"); ?>  
+                <?php include("../header.php"); ?>
                 <!-- end Topbar -->
 
                 <!-- Start Content-->
@@ -163,3 +164,6 @@
 </body>
 
 </html>
+<?php } else {
+        header("Location:http://localhost/Technology/user/login.php");
+    } ?>

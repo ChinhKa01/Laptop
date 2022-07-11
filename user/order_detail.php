@@ -1,5 +1,6 @@
 <?php
 session_start();
+if(isset($_SESSION['user'])){
 include("../connect.php");
 ?>
 <!doctype html>
@@ -93,3 +94,6 @@ include("../connect.php");
 </body>
 
 </html>
+<?php } else {
+    header("Location:http://localhost/Technology/user/login.php");
+} ?>

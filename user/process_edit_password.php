@@ -11,17 +11,16 @@ $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$oldPass'";
 $rs = mysqli_query($connect, $sql);
 $r = mysqli_num_rows($rs);
 
-if(empty($oldPass) || empty($newPass) || empty($newPassAgain) ||empty($email)){
+if (empty($oldPass) || empty($newPass) || empty($newPassAgain) || empty($email)) {
     echo "isEmpty";
-}else if($r == 0) {
+} else if ($r == 0) {
     echo "notCorrect";
-}
-else if($newPass != $newPassAgain){
+} else if ($newPass != $newPassAgain) {
     echo "notSame";
-}else{
+} else {
     $sql = "UPDATE users SET password = '$newPass' WHERE id = '$user_id'";
     $rs = mysqli_query($connect, $sql);
-    if($rs){
+    if ($rs) {
         echo "success";
     }
 }

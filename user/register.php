@@ -5,12 +5,12 @@ session_start();
 <html class="no-js" lang="en">
 
 <head>
-    <?php include("head.php");?>
+    <?php include("head.php"); ?>
 </head>
 
 <body>
     <header>
-    <header>
+        <header>
             <div class="header-top-furniture wrapper-padding-2 res-header-sm">
                 <div class="container-fluid">
                     <div class="header-bottom-wrapper">
@@ -46,7 +46,7 @@ session_start();
                             </nav>
                         </div>
                         <div class="header-cart">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -78,10 +78,10 @@ session_start();
                         <div class="login-form-container">
                             <div class="login-form">
                                 <div>
-                                    <input required type="text" id = "user-name" name="user-name" placeholder="Username">
-                                    <input required type="text" name="email" id = "email" placeholder="Email">
-                                    <input required type="password" name="user-password" id = "password" placeholder="Password">
-                                    <input required type="password" name="user-password-again" id = "password-again" placeholder="Password Again">
+                                    <input required type="text" id="user-name" name="user-name" placeholder="Username">
+                                    <input required type="text" name="email" id="email" placeholder="Email">
+                                    <input required type="password" name="user-password" id="password" placeholder="Password">
+                                    <input required type="password" name="user-password-again" id="password-again" placeholder="Password Again">
                                     <div class="button-box">
                                         <button type="submit" class="default-btn floatright check">Đăng ký</button>
                                     </div>
@@ -97,10 +97,10 @@ session_start();
     <footer class="footer-area">
         <?php include("footer.php"); ?>
     </footer>
-    
+
     <script>
-         $(document).ready(function() {
-            $(".check").click(function(){
+        $(document).ready(function() {
+            $(".check").click(function() {
                 let username = document.getElementById("user-name").value;
                 let email = document.getElementById("email").value;
                 let password = document.getElementById("password").value;
@@ -115,27 +115,22 @@ session_start();
                         password_again
                     },
                 }).done(function(data) {
-                    if(data == "isEmpty"){
-                        swal("warning", "Bạn cần phải điền tất cả thông tin!","warning");
-                    }
-                    else if(data == "invalidEmail") {
-                        swal("warning", "Email nhập sai định dạng!","warning");
-                    }
-                    else if(data == "notSame") {
-                        swal("warning", "Email không đồng nhất!","warning");
-                    }
-                    else if(data == "invalidPassword") {
-                        swal("warning", "Mật khẩu phải từ 8 ký tự trở lên!","warning");
-                    }
-                    else if(data == "isExistEmail"){
-                        swal("warning", "Email này đã tồn tại!","warning");
-                    }
-                    else if(data == "success"){
-                        swal("success", "Đăng ký thành công","success");
+                    if (data == "isEmpty") {
+                        swal("warning", "Bạn cần phải điền tất cả thông tin!", "warning");
+                    } else if (data == "invalidEmail") {
+                        swal("warning", "Email nhập sai định dạng!", "warning");
+                    } else if (data == "notSame") {
+                        swal("warning", "Email không đồng nhất!", "warning");
+                    } else if (data == "invalidPassword") {
+                        swal("warning", "Mật khẩu phải từ 8 ký tự trở lên!", "warning");
+                    } else if (data == "isExistEmail") {
+                        swal("warning", "Email này đã tồn tại!", "warning");
+                    } else if (data == "success") {
+                        swal("success", "Đăng ký thành công", "success");
                     }
                 });
             });
-         });
+        });
     </script>
     <!-- all js here -->
     <?php include("script.php"); ?>

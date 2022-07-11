@@ -5,12 +5,12 @@ session_start();
 <html class="no-js" lang="en">
 
 <head>
-    <?php include("head.php");?>
+    <?php include("head.php"); ?>
 </head>
 
 <body>
     <header>
-    <header>
+        <header>
             <div class="header-top-furniture wrapper-padding-2 res-header-sm">
                 <div class="container-fluid">
                     <div class="header-bottom-wrapper">
@@ -46,7 +46,7 @@ session_start();
                             </nav>
                         </div>
                         <div class="header-cart">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ session_start();
                         <div class="login-form-container">
                             <div class="login-form">
                                 <div>
-                                    <input required type="text" name="email" id = "email" placeholder="Nhập email của bạn">
+                                    <input required type="text" name="email" id="email" placeholder="Nhập email của bạn">
                                     <div class="button-box">
                                         <button type="submit" class="default-btn floatright check">Gửi yêu cầu</button>
                                     </div>
@@ -96,8 +96,8 @@ session_start();
     </footer>
 
     <script>
-         $(document).ready(function() {
-            $(".check").click(function(){
+        $(document).ready(function() {
+            $(".check").click(function() {
                 let email = document.getElementById("email").value;
                 $.ajax({
                     url: "ProcessForgotPassword.php",
@@ -106,21 +106,18 @@ session_start();
                         email
                     },
                 }).done(function(data) {
-                    if(data == "isEmpty"){
-                        swal("warning", "Bạn cần nhập Email!","warning");
-                    }
-                    else if(data == "invalidEmail"){
-                        swal("warning", "Email không hợp lệ!","warning");
-                    }
-                    else if(data == "isNotExistEmail"){
-                        swal("warning", "Email này không tồn tại!","warning");
-                    }
-                    else{
-                        swal("Mật khẩu của bạn là:", data,"success");
+                    if (data == "isEmpty") {
+                        swal("warning", "Bạn cần nhập Email!", "warning");
+                    } else if (data == "invalidEmail") {
+                        swal("warning", "Email không hợp lệ!", "warning");
+                    } else if (data == "isNotExistEmail") {
+                        swal("warning", "Email này không tồn tại!", "warning");
+                    } else {
+                        swal("Mật khẩu của bạn là:", data, "success");
                     }
                 });
             });
-         });
+        });
     </script>
     <!-- all js here -->
     <?php include("script.php"); ?>

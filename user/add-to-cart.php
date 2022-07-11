@@ -10,8 +10,8 @@ if (isset($_SESSION['cart'])) {
 } else {
     $cart =  [];
 }
-if($rs['quantity'] > 0) {
-    if (array_key_exists($id, $cart) ) {
+if ($rs['quantity'] > 0) {
+    if (array_key_exists($id, $cart)) {
         $cart[$id]['quantity']++;
     } else {
         $cart[$id]  = array('name' => $rs['name'], 'image' => $rs['image'], 'quantity' => 1, 'price' => $rs['price']);
